@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+.sidebar {
+  height: 100vw;
+  width: 200px;
+  margin-top: 50px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: red;
+  overflow-x: hidden;
+}
+
+.results-area {
+  margin-left: 200px;
+  background-color: green;
+}
+
+.header {
+  height: 50px;
+  background-color: blue;
+}
