@@ -8,8 +8,8 @@ export default class DisplayResults extends Component {
                 {
                     this.props.isLoading
                         ? <p>Loading!</p>
-                        : this.props.pokeState.map(pokeBooger => <p>
-                            {pokeBooger.pokemon} : <img src="{pokeBooger.url_image}" alt="Pokemon"></img></p>)
+                        : this.props.pokeState.map(pokeBooger => <li>
+                            {pokeBooger.pokemon} : <img src={pokeBooger.url_image} alt="Pokemon"></img></li>)
                 }
             </section>
         )
