@@ -9,7 +9,11 @@ export default class DisplayResults extends Component {
                     this.props.isLoading
                         ? <p>Loading!</p>
                         : this.props.pokeState.map(pokeBooger => <li>
-                            {pokeBooger.pokemon} : <img src={pokeBooger.url_image} alt="Pokemon"></img></li>)
+                            {pokeBooger.pokemon} <br />
+                            type : {pokeBooger.type_1} <br />
+                            attack : {pokeBooger.attack} <br />
+                            defense: {pokeBooger.defense}
+                            <img src={pokeBooger.url_image} alt="Pokemon"></img></li>)
                 }
             </section>
         )

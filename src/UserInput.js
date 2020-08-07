@@ -4,16 +4,13 @@ export default class UserInput extends Component {
     render() {
         return (
             <aside className="sidebar">
-                <label>Search<input type="text" name="nameField" /></label>
+                <label>Search by Name<input type="text" name="nameField" onChange={this.props.handleSearchByName} /></label>
                 <button onClick={this.props.handleClick}>Go!</button>
                 <br />
-                <select>
-                    <option value="" defaultValue></option>
-                    <option name="typeField" value="Type">Type</option>
-                </select>
-                <input name="attackField" type="number" min="1"></input>
-                <input name="defenseField" type="number" min="1"></input>
-                <button name="update" onSubmit={this.props.filterPokemon}>Update</button>
+                <label>Search by Type<input type="text" onChange={this.props.handleSearchByType} /></label>
+                <label>Search by minimum attack value<input name="attackField" type="number" min="1" onChange={this.props.handleAttackFilter}/></label>
+                <label>Search by minimum defense value<input name="defenseField" type="number" min="1" onChange={this.props.handleDefenseFilter}/></label>
+                <button name="update" onSubmit={this.props.updateButton}>Update</button>
             </aside>
         )
     }
