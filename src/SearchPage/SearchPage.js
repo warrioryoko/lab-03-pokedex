@@ -35,7 +35,7 @@ componentDidMount = async () => {
 makeRequest = async () => {
     this.setState({ isLoading: true });
 
-    const data = await request.get(`https://alchemy-pokedex.herokuapp..com/api/pokedex?page=${this.state.currentPage}&perPage=20&${this.state.searchBy}=${this.state.search}`);
+    const data = await request.get(`https://alchemy-pokedex.herokuapp.com/api/pokedex?page=${this.state.currentPage}&perPage=20&${this.state.searchBy}=${this.state.search}`);
 
     await this.setState({
         pokeState: data.body.results,
@@ -103,15 +103,14 @@ render() {
                     <option value='attack'>attack</option>
                     <option value='defense'>defense</option>
                 </select>
-                <button onClick={this.handleClick}>Fetch Pokemon!</button>
+                <button onClick={this.handleClick}>Do The Search!</button>
                 </form>
             </div>
             <div className="results">
                 {
                     isLoading 
-                    ? <p>LOADING</p> 
-                    // : pokeState.map(poke => <PokeItem pokemon={poke} 
-                    : <PokeList
+                        ? <p>LOADING</p> 
+                        : <PokeList
                             handleNextClick={this.handleNextClick}
                             handlePrevClick={this.handlePrevClick}
                             currentPage={currentPage}
