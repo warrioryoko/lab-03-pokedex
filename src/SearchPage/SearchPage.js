@@ -1,6 +1,5 @@
 import React from 'react';
 import request from 'superagent';
-import PokeItem from './PokeItem.js';
 import PokeList from './PokeList.js';
 
 // props are how parent components talk to child components -- we "pass" props from parents to children
