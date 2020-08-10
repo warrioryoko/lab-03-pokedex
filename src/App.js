@@ -16,12 +16,14 @@ export default class App extends Component {
             <div className={styles.Box}>
                 <Router>
                     <header>
-                        <li>
+                            <p>
                             <Link to="/detail">Detail</Link>
-                        </li>
-                        <li>
+                            </p>
+                        
+                            <p>
                             <Link to="/">Home</Link>
-                        </li>
+                            </p>
+
                     </header>
                     <Switch>
                         <Route 
